@@ -8,4 +8,4 @@
 7. apply the concept of modules on network.
 8. creating backend in to be able to share the state file on s3 service.
 9. avoid state locked by using dynamodb service in backend file.
-10. Creating two workspaces one for production and the other for development 
+10. Creating two workspaces one for production and the other for development. 
