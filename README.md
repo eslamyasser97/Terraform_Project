@@ -9,7 +9,7 @@
 8. creating backend in to be able to share the state file on s3 service.
 9. avoid state locked by using dynamodb service in backend file.
 10. Creating two workspaces one for production and the other for development. 
-## Ias pipeline
+## Iac pipeline
 1.creating a jenkinsfile that contain a pipeline script to apply or destroy terraform code
 ### Note
 1. you must create a ec2 slave with label name ec2
