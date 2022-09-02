@@ -1,0 +1,22 @@
+pipeline {
+    agent { label 'ec2' }
+
+    stages {
+        stage('check out from git') {
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/eslamyasser97/Terraform_Project.git']]])            }
+        }
+        stage('terraform_init') {
+            steps {
+                sh('terraform init')
+            }
+          }
+                
+        stage('terraform_apply') {
+            steps {
+                echo 'terraform apply from the parameter is -->'
+                sh('terraform $action --var-file=dev.tfvars --auto-approve')
+            }    
+        }
+    }
+ }
