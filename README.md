@@ -10,21 +10,22 @@
 - avoid state locked by using dynamodb service in backend file.
 - Creating two workspaces one for production and the other for development. 
 ## Iac pipeline
-- creating a jenkinsfile that contain a pipeline script to apply or destroy terraform code
+- creating a jenkinsfile that contain a pipeline script to apply or destroy terraform code.
 ### Note
-- you must create a ec2 slave with label name ec2
-- this scrip is paramatirezed
-  - the first parameter named (action) is to make apply or destory use this to word when you making parameter ( apply - destroy)
-  - the second parameter is named (action_var) to run prodution enviroment or development enviroment use this to word when you making parameter ( dev.tfvars - prod.tfvars)
-- to use it to slave to master jenkins you must give the following rules to your ec2
-  - AmazonEC2FullAccess
-  - SecretsManagerReadWrite
-  - AmazonS3FullAccess
-  - AmazonDynamoDBFullAccess
-  - AmazonVPCFullAccess
-  - AWSNetworkManagerFullAccess
-  - AWSKeyManagementServicePowerUser
-  - AWSAccountManagementFullAccess
-  - NetworkAdministrator
+- you must donwload terraform in your ec2.
+- you must create a ec2 slave with label name ec2.
+- this scrip is paramatirezed.
+  - the first parameter named (action) is to make apply or destory use this to word when you making parameter ( apply - destroy).
+  - the second parameter is named (action_var) to run prodution enviroment or development enviroment use this to word when you making parameter ( dev.tfvars - prod.tfvars).
+- to use it to slave to master jenkins you must give the following rules to your ec2.
+  - AmazonEC2FullAccess.
+  - SecretsManagerReadWrite.
+  - AmazonS3FullAccess.
+  - AmazonDynamoDBFullAccess.
+  - AmazonVPCFullAccess.
+  - AWSNetworkManagerFullAccess.
+  - AWSKeyManagementServicePowerUser.
+  - AWSAccountManagementFullAccess.
+  - NetworkAdministrator.
 
 
