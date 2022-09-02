@@ -15,7 +15,7 @@ pipeline {
         stage('terraform_apply') {
             steps {
                 echo 'terraform apply from the parameter is -->'
-                sh('terraform $action --var-file=dev.tfvars --auto-approve')
+                sh('terraform $action --var-file=$action_var --auto-approve')
             }    
         }
     }
