@@ -9,6 +9,7 @@
 - creating backend in to be able to share the state file on s3 service.
 - avoid state locked by using dynamodb service in backend file.
 - Creating two workspaces one for production and the other for development. 
+- Deploying 2 replicas of nginx using eks service in two diffrent private subnet (private subnet1 and private subnet2)  
 ## Iac pipeline
 - creating a jenkinsfile that contain a pipeline script to apply or destroy terraform code.
 ### Note
