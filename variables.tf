@@ -32,3 +32,6 @@ variable az1 {
 variable az2 {
   type = string
 }
+variable "cluster_name" {
+  type = string
+}
