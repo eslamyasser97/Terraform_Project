@@ -9,3 +9,11 @@ output "aws_subnet_private1" {
 output "aws_subnet_private2" {
   value = aws_subnet.private2.id
 }
+
+output "aws_subnet_public1" {
+  value = aws_subnet.public1.id
+}
+
+output "aws_subnet_public2" {
+  value = aws_subnet.public2.id
+}
